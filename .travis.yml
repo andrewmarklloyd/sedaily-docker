@@ -16,5 +16,6 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: $AWS_BUCKET
   skip_cleanup: true
+  region: us-west-2
   local_dir: target/latest/
   acl: public_read
