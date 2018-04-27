@@ -5,3 +5,6 @@ export COMMAND="mongodump --host $MONGO_HOST -d $MONGO_DB --port $MONGO_PORT --u
 docker run -v `pwd`/dump:/home/dump --rm -it mongo:3.4.10 bash -c "$COMMAND"
 # tar and compress the dump
 tar -czf dump.tar.gz ./dump/
+
+# create the upload directory for S3
+mkdir -p target/latest
